@@ -49,6 +49,9 @@ namespace EasyQuestSwitch.Types
                     case BuildTarget.Android:
                         ShaderPath.Quest = Shader.Get(buildTarget).name;
                         break;
+                    case BuildTarget.iOS:
+                        ShaderPath.iOS = Shader.Get(buildTarget).name;
+                        break;
                 }
             }
             else if(Shader.Get(buildTarget) == null && !string.IsNullOrEmpty(ShaderPath.Get(buildTarget)))
@@ -60,6 +63,9 @@ namespace EasyQuestSwitch.Types
                         break;
                     case BuildTarget.Android:
                         Shader.Quest = UnityEngine.Shader.Find(ShaderPath.Quest);
+                        break;
+                    case BuildTarget.iOS:
+                        Shader.iOS = UnityEngine.Shader.Find(ShaderPath.iOS);
                         break;
                 }
             }

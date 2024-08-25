@@ -150,7 +150,7 @@ namespace EasyQuestSwitch
         
         public void ApplyTarget(BuildTarget newTarget)
         {
-            if(newTarget == BuildTarget.StandaloneWindows64 || newTarget == BuildTarget.Android)
+            if(newTarget == BuildTarget.StandaloneWindows64 || newTarget == BuildTarget.Android || newTarget == BuildTarget.iOS)
             {
                 for(int i = 0; i < Objects.Count; i++)
                 {
